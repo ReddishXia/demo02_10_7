@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<img src="C:\Users\79988\Downloads\demo1\Disease_figure_PMC7825075.png">-->
+<div class="main">
+
+    <div class="left-up">
+        <div style="text-align: center;">
+            <h2 class="title3" > Key Topics</h2>
+        </div>
+<!--        <img th:src="${imageurl}" height=349 class="pct">-->
+<!--        <img th:src="@{/templates/Disease_figure_PMC7824075.png}" height=349 class="pct">-->
+        <img th:src="${imageurl}" height=349 class="pct1">
+    </div>
+
+
+
+    <div class="right-up">
+        <div style="text-align: center;">
+            <h2 class="title3" >Key Location Mentions</h2>
+        </div>
+        <img th:src="${imageurl1}" height=349 class="pct1">
+    </div>
+
+    <div class="left-down">
+        <div style="text-align: center;">
+            <h2 class="title3" >Word Cloud of Key Topics</h2>
+        </div>
+        <img th:src="${imageurl2}" height=349 class="pct">
+    </div>
+
+    <div class="right-down">
+        <div style="text-align: center;">
+            <h2 class="title3" >Key Disease Mentions</h2>
+        </div>
+        <img th:src="${imageurl3}" height=349 class="pct1">
+    </div>
+    <div style="text-align: center;" class="submit">
+        <form th:action="@{/input}" method="post">
+        <input type="submit" value="return" />
+        </form>
+    </div>
+
+<!--    <img src="./Disease_figure_PMC7825075.png">-->
+<!--    <img src="./Location_figure_PMC7825075.png">-->
+<!--    <img src="./Regular%20Article%20Trigram_figure_PMC7825075.png">-->
+</div>
+
+<!--adasdasdasd-->
+</body>
+</html>
+
+<style scoped>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .main {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .left-up{
+        width: 60%;
+        height: 50%;
+        float: left;
+    }
+    /*.left-up-w{*/
+    /*    width: 64.3%;*/
+    /*    height: 10%;*/
+    /*    float: left;*/
+    /*}*/
+    .right-up{
+        width: 40%;
+        height: 50%;
+        float: left;
+    }
+    /*.right-up-w{*/
+    /*    width: 35.7%;*/
+    /*    height: 10%;*/
+    /*    float: left;*/
+    /*}*/
+    .left-down{
+        width: 60%;
+        height: 50%;
+        float: left;
+    }
+    /*.left-down-w{*/
+    /*    width: 64.3%;*/
+    /*    height: 10%;*/
+    /*    float: left;*/
+    /*}*/
+    .right-down{
+        width: 40%;
+        height: 50%;
+        float: left;
+    }
+    /*.right-down-w{*/
+    /*    width: 35.7%;*/
+    /*    height: 10%;*/
+    /*    float: left;*/
+    /*}*/
+
+    .pct{
+        transform: translateX(170px);
+    }
+    .pct1{
+        transform: translateX(90px);
+    }
+</style>
